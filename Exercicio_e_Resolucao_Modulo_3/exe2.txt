@@ -1,0 +1,11 @@
+
+ALTER TABLE aluno ADD data_nascimento varchar(10);
+ALTER TABLE aluno CHANGE COLUMN data_nascimento nascimento date null;
+
+ALTER TABLE aluno ADD INDEX INDEX_ALUNO(aluno);
+
+ALTER TABLE instrutor ADD email varchar(100) not null;
+
+ALTER TABLE curso ADD INDEX INDEX_INT(instrutor);
+
+ALTER TABLE instrutor DROP email
